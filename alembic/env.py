@@ -5,6 +5,7 @@ from alembic import context
 from sqlalchemy.ext.asyncio import async_engine_from_config
 from sqlalchemy.pool import NullPool
 
+import src.models  # noqa: F401 — registra modelos en Base.metadata para autogenerate
 from src.config import settings
 from src.models.base import Base
 
